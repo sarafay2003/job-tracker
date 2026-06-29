@@ -99,6 +99,25 @@ function Dashboard() {
         </button>
       </div>
 
+      {/* Stats */}
+<div className="grid grid-cols-4 gap-4 mb-8">
+  <div className="bg-white rounded-xl shadow p-4 text-center">
+    <p className="text-3xl font-bold text-blue-600">{applications.length}</p>
+    <p className="text-gray-500 mt-1">Total</p>
+  </div>
+  <div className="bg-blue-50 rounded-xl shadow p-4 text-center">
+    <p className="text-3xl font-bold text-blue-400">{applications.filter(a => a.status === 'Applied').length}</p>
+    <p className="text-gray-500 mt-1">Applied</p>
+  </div>
+  <div className="bg-yellow-50 rounded-xl shadow p-4 text-center">
+    <p className="text-3xl font-bold text-yellow-400">{applications.filter(a => a.status === 'Interview').length}</p>
+    <p className="text-gray-500 mt-1">Interview</p>
+  </div>
+  <div className="bg-green-50 rounded-xl shadow p-4 text-center">
+    <p className="text-3xl font-bold text-green-400">{applications.filter(a => a.status === 'Offer').length}</p>
+    <p className="text-gray-500 mt-1">Offer</p>
+  </div>
+</div>
       {/* Add Application Form */}
       <div className="bg-white rounded-xl shadow p-6 mb-8">
         <h2 className="text-xl font-semibold mb-4">Add Application</h2>
